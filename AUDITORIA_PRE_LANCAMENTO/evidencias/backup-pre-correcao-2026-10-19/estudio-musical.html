@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Estúdio Musical | Sunangai Project</title>
+  <meta name="description" content="Conhe&#231;a os servi&#231;os do Est&#250;dio Musical Sunangai Project: capta&#231;&#227;o, mistura e masteriza&#231;&#227;o, instrumental, produ&#231;&#227;o musical, EPs e &#225;lbuns." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@700&family=Outfit:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .studio-top { padding: 10px clamp(18px, 4vw, 64px); background:#030303; }
+    .studio-top .topbar { min-height:68px; margin:0; }
+    .studio-top .brand-logo { width:clamp(220px, 24vw, 350px); max-height:64px; }
+    .studio-top .menu { margin-right:clamp(12px, 5vw, 90px); gap:clamp(24px, 4vw, 64px); }
+    .studio-top .menu a { font-size:clamp(13px, 1vw, 17px); }
+    .studio-hero { position:relative; isolation:isolate; min-height:clamp(510px, 59vw, 630px); display:grid; grid-template-columns:minmax(0,1.2fr) minmax(300px,.8fr); align-items:center; gap:clamp(18px,4vw,70px); padding:54px clamp(28px,5.7vw,96px) 76px; overflow:hidden; background:#080808 url("stu.jpg") center 47%/cover no-repeat; }
+    .studio-hero::before { content:""; position:absolute; z-index:0; inset:0; background:linear-gradient(90deg,rgba(0,0,0,.94) 0%,rgba(0,0,0,.78) 34%,rgba(0,0,0,.28) 60%,rgba(0,0,0,.86) 100%); }
+    .studio-hero::after { content:""; position:absolute; z-index:2; left:-4%; right:-4%; bottom:-50px; height:92px; border-top:4px solid var(--gold); border-radius:50% 46% 0 0/45% 70% 0 0; background:#030303; transform:rotate(-1deg); }
+    .studio-copy,.studio-services { position:relative; z-index:1; }
+    .studio-copy { max-width:760px; }
+    .studio-eyebrow { display:flex; align-items:center; gap:14px; margin-bottom:14px; color:var(--gold); font-size:clamp(12px,1.1vw,17px); font-weight:700; letter-spacing:.28em; text-transform:uppercase; }
+    .studio-eyebrow::after { content:""; width:110px; height:2px; background:var(--gold); }
+    .studio-copy h1 { margin:0 0 8px; color:#fff; font-family:"Outfit",sans-serif; font-size:clamp(48px,6vw,96px); font-weight:700; letter-spacing:-.055em; line-height:.98; }
+    .studio-copy h1 span,.studio-subtitle strong { color:var(--gold); font-style:italic; }
+    .studio-subtitle { margin:0 0 18px; font-size:clamp(18px,2vw,30px); font-weight:600; line-height:1.25; }
+    .studio-subtitle b { color:var(--gold); }
+    .studio-description { max-width:610px; margin:0 0 30px; color:#f2f2f2; font-size:clamp(16px,1.55vw,24px); line-height:1.4; }
+    .studio-cta { display:inline-flex; align-items:center; gap:14px; padding:12px 24px 12px 12px; border-radius:40px; background:var(--gold); color:#080808; font-size:clamp(14px,1.1vw,18px); font-weight:700; text-decoration:none; box-shadow:0 8px 30px #f4b40035; }
+    .studio-cta .play { display:grid; width:40px; height:40px; place-items:center; border-radius:50%; background:#050505; color:var(--gold); font-size:19px; }
+    .studio-services { justify-self:end; width:min(100%,430px); padding-top:10px; }
+    .studio-service { display:flex; align-items:center; gap:18px; min-height:80px; border-bottom:1px solid rgba(244,180,0,.32); background:linear-gradient(90deg,rgba(0,0,0,.78) 0%,rgba(0,0,0,.58) 70%,rgba(0,0,0,.12) 100%); box-shadow:0 5px 14px rgba(0,0,0,.55); font-size:clamp(17px,1.4vw,24px); font-weight:600; }
+    .studio-service:first-child { border-top:1px solid #f4b40045; }
+    .studio-service-icon { display:grid; flex:0 0 58px; width:58px; height:58px; place-items:center; border:2px solid var(--gold); border-radius:50%; color:var(--gold); }
+    .studio-service-icon svg { width:31px; height:31px; fill:none; stroke:currentColor; stroke-width:2; stroke-linecap:round; stroke-linejoin:round; }
+    .studio-service-icon .icon-fill { fill:currentColor; stroke:none; }
+    .studio-ribbon { position:absolute; z-index:3; bottom:0; left:50%; transform:translateX(-50%); width:max-content; max-width:90%; padding:0 18px 7px; background:#030303; color:var(--gold); font-size:12px; letter-spacing:.35em; text-align:center; }
+    @media(max-width:760px) {
+      .studio-top { padding:8px 16px; }
+      .studio-top .topbar { min-height:62px; }
+      .studio-top .brand-logo { width:clamp(170px,50vw,240px); }
+      .studio-hero { grid-template-columns:1fr; gap:30px; min-height:0; padding:60px 24px 96px; background-position:55% center; }
+      .studio-hero::before { background:linear-gradient(90deg,rgba(0,0,0,.88),rgba(0,0,0,.58)),linear-gradient(0deg,#0008,transparent); }
+      .studio-copy { max-width:620px; }
+      .studio-copy h1 { font-size:clamp(46px,11vw,76px); }
+      .studio-subtitle { font-size:clamp(17px,4vw,24px); }
+      .studio-description { max-width:520px; font-size:17px; }
+      .studio-services { justify-self:stretch; width:100%; display:grid; grid-template-columns:1fr 1fr; gap:0 18px; }
+      .studio-service { min-height:68px; gap:12px; padding:8px 6px; font-size:15px; }
+      .studio-service-icon { flex-basis:46px; width:46px; height:46px; }
+      .studio-ribbon { font-size:9px; letter-spacing:.2em; }
+    }
+    @media(max-width:480px) {
+      .studio-services { grid-template-columns:1fr; }
+      .studio-service { min-height:62px; }
+    }
+  </style>
+  <link rel="stylesheet" href="mobile-responsive.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Saltar para o conte&#250;do</a>
+  <header class="site-page-header pattern-bg">
+  <div class="topbar">
+<a class="brand" href="index.html#inicio" aria-label="Sunangai Project &#8212; in&#237;cio"><img class="brand-logo" src="LOGOS PARA SITE/sunangai-header.png" alt="Logo Sunangai Project" /></a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-menu" aria-label="Abrir menu"><svg class="menu-icon" viewBox="0 0 24 24" width="23" height="23" fill="none" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" /></svg></button>
+    <nav id="main-menu" class="menu" aria-label="Navega&#231;&#227;o principal">
+      <a class="active" href="index.html#inicio" id="nav-home">In&#237;cio</a>
+      <a href="#contato" id="nav-contact">Contato</a>
+      <div class="menu-item has-submenu">
+        <a href="index.html#servicos"><span id="nav-services">Servi&#231;os</span> <span class="menu-caret">&#9662;</span></a>
+        <div class="submenu">
+          <a href="estudio-musical.html" id="sub-studio">Est&#250;dio Musical</a>
+          <a href="agencia-artistica.html" id="sub-agency">Ag&#234;ncia Art&#237;stica</a>
+          <a href="producao-eventos.html" id="sub-events">Produ&#231;&#227;o de Eventos</a>
+          <a href="design-grafico.html" id="sub-design">Design Gr&#225;fico</a>
+          <a href="marketing.html" id="sub-marketing">Marketing</a>
+        </div>
+      </div>
+    </nav>
+  </div>
+</header>
+
+  <main id="main-content" tabindex="-1" class="studio-hero">
+    <section class="studio-copy" aria-labelledby="page-title">
+      <div class="studio-eyebrow" id="studio-eyebrow">Sunangai Project</div>
+      <h1 id="page-title">Estúdio <span>Musical</span></h1>
+      <p class="studio-subtitle" id="studio-subtitle">Crie <b>•</b> Grave <b>•</b> Produza com <strong>Qualidade Profissional</strong></p>
+      <p class="studio-description" id="studio-description">Um espaço completo para transformar as suas ideias em grandes produções. Do som à emoção, aqui a sua música ganha vida.</p>
+      <a class="studio-cta" href="#studio-services" id="cta-contact"><span class="play" aria-hidden="true">▶</span><span id="cta-label">Conheça os Nossos Serviços</span><span aria-hidden="true">➜</span></a>
+    </section>
+    <section class="studio-services" id="studio-services" aria-label="Serviços do estúdio">
+      <div class="studio-service"><span class="studio-service-icon" aria-hidden="true"><svg viewBox="0 0 32 32"><rect x="11" y="3" width="10" height="17" rx="5"/><path d="M7 15a9 9 0 0 0 18 0M16 24v5m-5 0h10M14 8h4m-4 4h4m-4 4h4"/></svg></span><span id="item-1">Captação</span></div>
+      <div class="studio-service"><span class="studio-service-icon" aria-hidden="true"><svg viewBox="0 0 32 32"><path d="M8 4v24M16 4v24M24 4v24"/><path d="M5 10h6m2 7h6m2-8h6"/><circle class="icon-fill" cx="8" cy="10" r="2.5"/><circle class="icon-fill" cx="16" cy="17" r="2.5"/><circle class="icon-fill" cx="24" cy="9" r="2.5"/></svg></span><span id="item-2">Mistura e Masterização</span></div>
+      <div class="studio-service"><span class="studio-service-icon" aria-hidden="true"><svg viewBox="0 0 32 32"><path d="M13 23V6l14-3v17"/><ellipse cx="8.5" cy="24" rx="4.5" ry="3.5"/><ellipse cx="22.5" cy="21" rx="4.5" ry="3.5"/></svg></span><span id="item-3">Instrumental</span></div>
+      <div class="studio-service"><span class="studio-service-icon" aria-hidden="true"><svg viewBox="0 0 32 32"><path d="M5 17v-3a11 11 0 0 1 22 0v3M5 16H3v8h5v-8H5zm22 0h2v8h-5v-8h3zM24 25a8 8 0 0 1-8 5h-3"/></svg></span><span id="item-4">Música Completa</span></div>
+      <div class="studio-service"><span class="studio-service-icon" aria-hidden="true"><svg viewBox="0 0 32 32"><rect x="3" y="8" width="26" height="17" rx="2"/><path d="M8 8l3-4h10l3 4M9 21l3-5 3 3 3-6 5 8"/><circle cx="24" cy="12" r="1"/></svg></span><span id="item-5">EP e Álbuns</span></div>
+    </section>
+    <div class="studio-ribbon" id="studio-ribbon">SOM DE QUALIDADE, IDEIAS SEM LIMITES</div>
+  </main>
+
+  <footer id="contato">
+      <div class="footer-grid">
+      <div>
+        <a class="footer-mark" href="index.html#inicio" aria-label="Sunangai Project — início"><img src="LOGOS PARA SITE/sunangai-header.png" alt="Sunangai Project" loading="lazy" /></a>
+      </div>
+      <div>
+        <div class="footer-title"><svg class="footer-contact-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 22s8-7.1 8-13a8 8 0 1 0-16 0c0 5.9 8 13 8 13Z"/><circle cx="12" cy="9" r="2.5"/></svg><span id="footer-location-title">Localização</span></div>
+        <p class="contact-row"><svg class="footer-contact-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 3.5 9.5 3l2 4.7-2 1.6a15 15 0 0 0 5.2 5.2l1.6-2 4.7 2-.5 2.9a3 3 0 0 1-3.3 2.5A16.8 16.8 0 0 1 4.1 6.8a3 3 0 0 1 2.5-3.3Z"/></svg><a href="tel:+258844501494">+258 84 450 1494</a></p>
+        <p class="contact-row"><svg class="footer-contact-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m4 7 8 6 8-6"/></svg><a href="mailto:infosunangai.co.mz">infosunangai.co.mz</a></p>
+        <p class="contact-row"><svg class="footer-contact-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 22s8-7.1 8-13a8 8 0 1 0-16 0c0 5.9 8 13 8 13Z"/><circle cx="12" cy="9" r="2.5"/></svg><a href="https://maps.google.com/?q=Mo%C3%A7ambique%20Maputo%20Bairro%20de%20Malhazine%20Rua%2015%20Q13%20N%C2%BA%20185-R%2FC" target="_blank" rel="noopener noreferrer">Moçambique - Maputo, Bairro de Malhazine Rua 15, Q13, Nº 185-R/C</a></p>
+      </div>
+      <div>
+        <div class="footer-title" id="footer-social-title">Social</div>
+        <div class="social-links">
+          <a class="social-icon ig" href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7z"/>
+              <path d="M12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 2.1a2.9 2.9 0 1 0 0 5.8 2.9 2.9 0 0 0 0-5.8z"/>
+              <circle cx="17.5" cy="6.5" r="1.2"/>
+            </svg>
+          </a>
+          <a class="social-icon fb" href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M13.7 21v-8h2.7l.4-3h-3.1V8.1c0-.9.3-1.6 1.6-1.6h1.7V3.8c-.3 0-1.3-.1-2.4-.1-2.4 0-4 1.4-4 4.2V10H8v3h2.6v8h3.1z"/>
+            </svg>
+          </a>
+          <a class="social-icon tt" href="https://www.tiktok.com/" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M15.8 3c.2 1.3 1 2.5 2.2 3.2.8.4 1.6.7 2.5.8v2.8c-1.3 0-2.6-.4-3.7-1.1v6.2c0 3-2.4 5.4-5.4 5.4S6 18 6 15s2.4-5.4 5.4-5.4c.2 0 .5 0 .7.1v2.8a2.6 2.6 0 0 0-.7-.1 2.6 2.6 0 1 0 2.6 2.6V3h1.8z"/>
+            </svg>
+          </a>
+          <a class="social-icon yt" href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><span aria-hidden="true">▶</span></a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-title" id="footer-connect-title">Mantenha-se Conectado</div>
+        <p id="footer-connect-text">Receba as últimas notícias e atualizações</p>
+        <p><a class="contact-pill" href="mailto:infosunangai.co.mz" id="footer-contact-btn">Subscrever <span aria-hidden="true">✉</span></a></p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span id="footer-copy">© 2025 Sunangai Project. Todos os direitos reservados</span>
+      <span class="legal-links"><span id="footer-privacy">Política de Privacidade</span><span aria-hidden="true">|</span><span id="footer-terms">Termos de Uso</span></span>
+    </div>
+    <svg class="footer-waves" viewBox="0 0 1440 100" preserveAspectRatio="none" aria-hidden="true"><path d="M0 69 C155 70 220 94 395 94 S675 87 850 96 S1115 96 1240 65 S1380 19 1440 17"/><path d="M0 81 C160 81 240 101 420 101 S700 96 875 105 S1120 105 1260 78 S1390 37 1440 35"/><path d="M0 92 C175 92 260 109 440 109 S720 105 900 114 S1140 114 1280 91 S1400 55 1440 54"/></svg>
+  </footer>
+
+  <script>
+    (function () {
+      var btn = document.querySelector('.menu-toggle');
+      var menu = document.getElementById('main-menu');
+      if (!btn || !menu) return;
+
+      btn.addEventListener('click', function () {
+        var isOpen = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-label', isOpen ? 'Abrir menu' : 'Fechar menu');
+        btn.setAttribute('aria-expanded', String(!isOpen));
+        menu.classList.toggle('is-open', !isOpen);
+      });
+
+      menu.querySelectorAll('a').forEach(function (link) {
+        link.addEventListener('click', function () {
+          if (window.innerWidth <= 600) {
+            btn.setAttribute('aria-label', 'Abrir menu');
+            btn.setAttribute('aria-expanded', 'false');
+            menu.classList.remove('is-open');
+          }
+        });
+      });
+    })();
+  </script>
+  <script>
+    (function () {
+      var buttons = document.querySelectorAll('.lang-btn');
+      if (!buttons.length) return;
+      var t = {
+        pt: {
+          navHome: 'Início', navContact: 'Contato', navServices: 'Serviços',
+          subStudio: 'Estúdio Musical', subAgency: 'Agência Artística', subEvents: 'Produção de Eventos', subDesign: 'Design Gráfico', subMarketing: 'Marketing',
+          title: 'Estúdio', titleAccent: 'Musical', eyebrow:'Sunangai Project',
+          subtitle:'Crie <b>•</b> Grave <b>•</b> Produza com <strong>Qualidade Profissional</strong>',
+          description:'Um espaço completo para transformar as suas ideias em grandes produções. Do som à emoção, aqui a sua música ganha vida.', ribbon:'SOM DE QUALIDADE, IDEIAS SEM LIMITES',
+          items: ['Captação', 'Mistura e Masterização', 'Instrumental', 'Música Completa', 'EP e Álbuns'],
+          cta: 'Conheça os Nossos Serviços',
+          footerLocation: 'Localização', footerSocial: 'Social', footerConnect: 'Mantenha-se Conectado',
+          footerText: 'Receba as últimas notícias e atualizações', footerBtn: 'Subscrever ✉',
+          copy: '© 2025 Sunangai Project. Todos os direitos reservados', privacy: 'Política de Privacidade', terms:'Termos de Uso'
+        },
+        en: {
+          navHome: 'Home', navContact: 'Contact', navServices: 'Services',
+          subStudio: 'Music Studio', subAgency: 'Art Agency', subEvents: 'Event Production', subDesign: 'Graphic Design', subMarketing: 'Marketing',
+          title: 'Music', titleAccent: 'Studio', eyebrow:'Sunangai Project',
+          subtitle:'Create <b>•</b> Record <b>•</b> Produce with <strong>Professional Quality</strong>',
+          description:'A complete space to turn your ideas into great productions. From sound to emotion, your music comes to life here.', ribbon:'QUALITY SOUND, IDEAS WITHOUT LIMITS',
+          items: ['Recording', 'Mixing and Mastering', 'Instrumental', 'Full Song', 'EPs and Albums'],
+          cta: 'Explore Our Services',
+          footerLocation: 'Location', footerSocial: 'Social', footerConnect: 'Stay Connected',
+          footerText: 'Receive the latest news and updates', footerBtn: 'Subscribe ✉',
+          copy: '© 2025 Sunangai Project. All rights reserved', privacy: 'Privacy Policy', terms:'Terms of Use'
+        }
+      };
+      function set(id, val) { var e = document.getElementById(id); if (e) e.textContent = val; }
+      function apply(lang) {
+        var c = t[lang] || t.pt;
+        set('nav-home', c.navHome); set('nav-contact', c.navContact); set('nav-services', c.navServices);
+        set('sub-studio', c.subStudio); set('sub-agency', c.subAgency); set('sub-events', c.subEvents); set('sub-design', c.subDesign); set('sub-marketing', c.subMarketing);
+        document.getElementById('page-title').innerHTML = c.title + ' <span>' + c.titleAccent + '</span>';
+        set('studio-eyebrow', c.eyebrow); document.getElementById('studio-subtitle').innerHTML = c.subtitle; set('studio-description', c.description); set('studio-ribbon', c.ribbon);
+        c.items.forEach(function (x, i) { set('item-' + (i + 1), x); });
+        set('cta-label', c.cta); set('footer-location-title', c.footerLocation); set('footer-social-title', c.footerSocial);
+        set('footer-connect-title', c.footerConnect); set('footer-connect-text', c.footerText); set('footer-contact-btn', c.footerBtn);
+        set('footer-copy', c.copy); set('footer-privacy', c.privacy); set('footer-terms', c.terms);
+        document.documentElement.lang = lang;
+        localStorage.setItem('site_lang', lang);
+      }
+      var lang='pt'; apply(lang);
+      buttons.forEach(function (b) {
+        b.classList.toggle('is-active', b.dataset.lang === lang);
+        b.addEventListener('click', function () {
+          apply(b.dataset.lang);
+          buttons.forEach(function (x) { x.classList.toggle('is-active', x === b); });
+        });
+      });
+    })();
+  </script>
+</body>
+</html>

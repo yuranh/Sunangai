@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Agência Artística | Sunangai Project</title>
+  <meta name="description" content="Conhe&#231;a os servi&#231;os de gest&#227;o de artistas, consultoria de imagem, planeamento de carreira e agenciamento para eventos da Sunangai Project." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@700&family=Outfit:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .service-top { position:relative; z-index:5; padding:8px clamp(18px,2.4vw,42px); border-bottom:1px solid var(--gold); background:#050505; }
+    .service-top .topbar { min-height:68px; margin:0; }
+    .service-top .topbar::before { display:none; }
+    .service-top .brand-logo { width:clamp(220px,21vw,330px); max-height:68px; }
+    .service-top .menu { gap:clamp(22px,3.2vw,54px); margin-right:clamp(12px,2.5vw,42px); }
+    .service-top .menu a { font-size:clamp(13px,.95vw,17px); }
+    .service-top .menu #nav-home { color:var(--gold); }
+    .service-top .menu #nav-home::after { content:""; position:absolute; right:0; bottom:0; left:0; height:2px; background:var(--gold); }
+    .agency-hero { position:relative; isolation:isolate; min-height:clamp(520px,60vh,610px); display:flex; align-items:center; padding:54px clamp(32px,6.2vw,110px) 76px; overflow:hidden; background:#08090c url("agen.jpg") center 42%/cover no-repeat; }
+    .agency-hero::before { content:""; position:absolute; z-index:0; inset:0; background:linear-gradient(90deg,rgba(3,4,7,.92) 0%,rgba(3,4,7,.82) 24%,rgba(3,4,7,.38) 43%,rgba(3,4,7,.06) 68%,rgba(3,4,7,.55) 100%),linear-gradient(0deg,rgba(0,0,0,.38),transparent 22%,transparent 85%,rgba(0,0,0,.18)); }
+    .agency-content { position:relative; z-index:1; width:min(560px,47vw); padding:26px 28px 28px 0; }
+    .agency-title { margin:0 0 22px; font-family:"Outfit",sans-serif; font-size:clamp(58px,6vw,100px); font-weight:700; letter-spacing:-.055em; line-height:.9; text-wrap:balance; }
+    .agency-title span { display:block; color:var(--gold); }
+    .agency-title #title-main { color:#fff; }
+    .agency-list { display:grid; gap:10px; margin:22px 0 26px; padding:0; list-style:none; }
+    .agency-list li { display:flex; align-items:center; gap:16px; min-height:43px; color:#fff; font-size:clamp(17px,1.65vw,27px); font-weight:500; line-height:1.2; text-shadow:0 2px 10px #000; }
+    .agency-list-icon { display:grid; flex:0 0 40px; width:40px; height:40px; place-items:center; border:2px solid var(--gold); border-radius:50%; background:rgba(0,0,0,.68); color:var(--gold); }
+    .agency-list-icon svg { width:22px; height:22px; fill:none; stroke:currentColor; stroke-width:2; stroke-linecap:round; stroke-linejoin:round; }
+    .agency-note { position:absolute; z-index:1; top:9%; right:5.5%; width:min(300px,24vw); color:var(--gold); font-family:"Cormorant Garamond",serif; font-size:clamp(30px,3vw,52px); font-style:italic; font-weight:700; line-height:.98; text-align:center; transform:rotate(-5deg); text-shadow:0 2px 12px #000; }
+    .agency-note::after { content:""; display:block; width:88%; height:12px; margin:8px auto 0; border-top:2px solid var(--gold); border-radius:50%; transform:rotate(-7deg); }
+    .agency-cta { display:inline-flex; align-items:center; gap:12px; min-height:58px; padding:8px 23px 8px 10px; border:1px solid var(--gold); border-radius:32px; background:var(--gold); color:#080808; font-size:17px; font-weight:700; text-decoration:none; transition:background-color .2s ease,transform .2s ease,box-shadow .2s ease; }
+    .agency-cta:hover { transform:translateY(-2px); background:#ffd54f; box-shadow:0 8px 22px #0008; }
+    .agency-cta:focus-visible { outline:3px solid #fff; outline-offset:4px; }
+    .agency-cta .cta-play { display:grid; width:38px; height:38px; place-items:center; border-radius:50%; background:#050505; color:var(--gold); font-size:16px; }
+    .agency-cta .cta-arrow { font-size:23px; line-height:1; }
+    .agency-wave { position:absolute; z-index:2; right:0; bottom:-1px; left:0; width:100%; height:62px; pointer-events:none; }
+    .agency-wave path { fill:none; stroke:var(--gold); stroke-width:3; vector-effect:non-scaling-stroke; }
+    .agency-footer { position:relative; margin:0; padding-top:28px; background:#030303; }
+    .agency-footer .footer-grid { grid-template-columns:1fr 1.15fr .9fr 1.2fr; gap:clamp(14px,2vw,34px); font-size:clamp(12px,.92vw,15px); }
+    .agency-footer .footer-grid > div + div { padding-left:clamp(14px,2.1vw,36px); }
+    .agency-brand { display:flex; flex-direction:column; align-items:center; text-align:center; }
+    .agency-brand .footer-mark { min-height:64px; height:64px; margin:0; }
+    .agency-brand .footer-mark img { width:150px; height:64px; }
+    .agency-brand-name { margin:2px 0 3px; color:#fff; font-size:clamp(16px,1.45vw,23px); font-weight:700; letter-spacing:.03em; }
+    .agency-brand-name span { color:var(--gold); }
+    .agency-brand-tagline { margin:0 0 10px; color:#ddd; font-size:13px; font-style:italic; }
+    .agency-footer .footer-title { color:var(--gold); font-family:"Outfit",sans-serif; font-size:clamp(13px,1.05vw,17px); font-weight:700; }
+    .agency-footer .footer-heading-icon { width:18px; height:18px; margin-right:7px; vertical-align:-3px; fill:none; stroke:var(--gold); stroke-width:2; stroke-linecap:round; stroke-linejoin:round; }
+    .agency-footer .social-links { gap:12px; margin-top:12px; }
+    .agency-footer .social-icon { width:40px; height:40px; border-color:var(--gold); color:var(--gold); padding:11px; }
+    .agency-footer .contact-pill { display:flex; justify-content:space-between; width:100%; min-height:46px; border:1px solid var(--gold); border-radius:28px; color:#fff; }
+    .agency-footer .contact-pill span { display:grid; width:38px; height:38px; place-items:center; margin:-5px -10px -5px 0; border-radius:50%; background:var(--gold); color:#080808; }
+    .agency-footer .footer-bottom { margin-top:22px; padding:14px 0 18px; border-top:1px solid rgba(255,184,0,.45); font-size:13px; }
+    .agency-footer .legal-links { display:inline-flex; align-items:center; gap:14px; }
+    @media(max-width:900px) {
+      .service-top { padding-inline:18px; }
+      .agency-hero { min-height:650px; align-items:flex-start; padding:64px 32px 90px; background-position:53% center; }
+      .agency-content { width:min(520px,72vw); }
+      .agency-note { top:7%; right:4%; width:200px; font-size:32px; }
+      .agency-footer .footer-grid { grid-template-columns:1fr 1fr; row-gap:24px; }
+      .agency-footer .footer-grid > div + div { padding-left:18px; }
+    }
+    @media(max-width:600px) {
+      .service-top { padding:6px 14px; }
+      .service-top .topbar { min-height:64px; }
+      .service-top .brand-logo { width:clamp(158px,46vw,215px); max-height:58px; }
+      .agency-hero { min-height:760px; padding:48px 20px 90px; background-position:54% center; }
+      .agency-hero::before { background:linear-gradient(90deg,rgba(0,0,0,.88),rgba(0,0,0,.54) 62%,rgba(0,0,0,.25)),linear-gradient(0deg,rgba(0,0,0,.65),transparent 55%); }
+      .agency-content { width:min(100%,470px); padding:20px 0 0; }
+      .agency-title { max-width:340px; margin-bottom:20px; font-size:clamp(50px,13vw,72px); }
+      .agency-list { gap:7px; margin-top:22px; }
+      .agency-list li { gap:12px; font-size:clamp(16px,4.5vw,20px); }
+      .agency-list-icon { flex-basis:38px; width:38px; height:38px; }
+      .agency-note { top:auto; right:16px; bottom:42px; width:170px; font-size:27px; }
+      .agency-wave { height:42px; }
+      .agency-footer { padding:24px 18px 12px; }
+      .agency-footer .footer-grid { grid-template-columns:1fr; gap:18px; }
+      .agency-footer .footer-grid > div + div { padding:16px 0 0; border-top:1px solid rgba(255,184,0,.32); border-left:0; }
+      .agency-brand { align-items:flex-start; text-align:left; }
+      .agency-footer .footer-bottom { align-items:flex-start; flex-direction:column; }
+    }
+  </style>
+  <link rel="stylesheet" href="mobile-responsive.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Saltar para o conte&#250;do</a>
+<header class="site-page-header pattern-bg service-top">
+  <div class="topbar">
+<a class="brand" href="index.html#inicio" aria-label="Sunangai Project &#8212; in&#237;cio"><img class="brand-logo" src="LOGOS PARA SITE/sunangai-header.png" alt="Logo Sunangai Project" /></a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-menu" aria-label="Abrir menu"><svg class="menu-icon" viewBox="0 0 24 24" width="23" height="23" fill="none" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" /></svg></button>
+    <nav id="main-menu" class="menu" aria-label="Navega&#231;&#227;o principal">
+      <a class="active" href="index.html#inicio" id="nav-home">In&#237;cio</a>
+      <a href="#contato" id="nav-contact">Contato</a>
+      <div class="menu-item has-submenu">
+        <a href="index.html#servicos"><span id="nav-services">Servi&#231;os</span> <span class="menu-caret">&#9662;</span></a>
+        <div class="submenu">
+          <a href="estudio-musical.html" id="sub-studio">Est&#250;dio Musical</a>
+          <a href="agencia-artistica.html" id="sub-agency">Ag&#234;ncia Art&#237;stica</a>
+          <a href="producao-eventos.html" id="sub-events">Produ&#231;&#227;o de Eventos</a>
+          <a href="design-grafico.html" id="sub-design">Design Gr&#225;fico</a>
+          <a href="marketing.html" id="sub-marketing">Marketing</a>
+        </div>
+      </div>
+    </nav>
+  </div>
+</header>
+
+  <main id="main-content" tabindex="-1" class="agency-hero">
+    <section class="agency-content" aria-labelledby="page-title">
+      <h1 class="agency-title" id="page-title"><span id="title-main">Agência</span><span id="title-accent">Artística</span></h1>
+      <ul class="agency-list">
+        <li><span class="agency-list-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="8" y="2" width="8" height="13" rx="4"/><path d="M5 11a7 7 0 0 0 14 0M12 18v4m-4 0h8M10 6h4m-4 3h4"/></svg></span><span id="item-1">Gestão de Artistas</span></li>
+        <li><span class="agency-list-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 7h18v13H3zM8 7l2-3h4l2 3"/><circle cx="12" cy="13" r="4"/></svg></span><span id="item-2">Consultoria de Imagem</span></li>
+        <li><span class="agency-list-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M7 2v6m10-6v6M3 10h18M8 14h3m2 0h3m-8 4h3m2 0h3"/></svg></span><span id="item-3">Planeamento de Carreira</span></li>
+        <li><span class="agency-list-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 12 4 8a3 3 0 0 1 4-4l4 4m4 4 4 4a3 3 0 0 1-4 4l-4-4M9 15l6-6m-9 3 4 4m4-8 4 4"/></svg></span><span id="item-4">Agenciamento para Eventos</span></li>
+      </ul>
+      <a class="agency-cta" href="#contato" id="cta-contact"><span class="cta-play" aria-hidden="true">▶</span><span id="cta-label">Contacte-nos</span><span class="cta-arrow" aria-hidden="true">➜</span></a>
+    </section>
+    <div class="agency-note" id="agency-note">Talento que<br />conecta pessoas.</div>
+    <svg class="agency-wave" viewBox="0 0 1600 70" preserveAspectRatio="none" aria-hidden="true"><path d="M0 22 C180 72 350 65 540 65 S960 67 1180 57 S1460 8 1600 28"/><path d="M0 34 C180 79 340 70 550 70 S970 72 1190 62 S1460 18 1600 38"/></svg>
+  </main>
+
+  <footer id="contato">
+      <div class="footer-grid">
+      <div>
+        <a class="footer-mark" href="index.html#inicio" aria-label="Sunangai Project — início"><img src="LOGOS PARA SITE/sunangai-header.png" alt="Sunangai Project" loading="lazy" /></a>
+      </div>
+      <div>
+        <div class="footer-title"><svg class="footer-contact-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 22s8-7.1 8-13a8 8 0 1 0-16 0c0 5.9 8 13 8 13Z"/><circle cx="12" cy="9" r="2.5"/></svg><span id="footer-location-title">Localização</span></div>
+        <p class="contact-row"><svg class="footer-contact-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 3.5 9.5 3l2 4.7-2 1.6a15 15 0 0 0 5.2 5.2l1.6-2 4.7 2-.5 2.9a3 3 0 0 1-3.3 2.5A16.8 16.8 0 0 1 4.1 6.8a3 3 0 0 1 2.5-3.3Z"/></svg><a href="tel:+258844501494">+258 84 450 1494</a></p>
+        <p class="contact-row"><svg class="footer-contact-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m4 7 8 6 8-6"/></svg><a href="mailto:info@sunangai.co.mz">info@sunangai.co.mz</a></p>
+        <p class="contact-row"><svg class="footer-contact-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 22s8-7.1 8-13a8 8 0 1 0-16 0c0 5.9 8 13 8 13Z"/><circle cx="12" cy="9" r="2.5"/></svg><a href="https://maps.google.com/?q=Mo%C3%A7ambique%20Maputo%20Bairro%20de%20Malhazine%20Rua%2015%20Q13%20N%C2%BA%20185-R%2FC" target="_blank" rel="noopener noreferrer">Moçambique - Maputo, Bairro de Malhazine Rua 15, Q13, Nº 185-R/C</a></p>
+      </div>
+      <div>
+        <div class="footer-title" id="footer-social-title">Social</div>
+        <div class="social-links">
+          <a class="social-icon ig" href="https://www.instagram.com/sunangaiproject/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7z"/>
+              <path d="M12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 2.1a2.9 2.9 0 1 0 0 5.8 2.9 2.9 0 0 0 0-5.8z"/>
+              <circle cx="17.5" cy="6.5" r="1.2"/>
+            </svg>
+          </a>
+          <a class="social-icon fb" href="https://www.facebook.com/p/Sunangai-Project-SU-Lda-61582045679565/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M13.7 21v-8h2.7l.4-3h-3.1V8.1c0-.9.3-1.6 1.6-1.6h1.7V3.8c-.3 0-1.3-.1-2.4-.1-2.4 0-4 1.4-4 4.2V10H8v3h2.6v8h3.1z"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-title" id="footer-connect-title">ENTRE EM CONTACTO</div>
+        <p id="footer-connect-text">Fale connosco por email.</p>
+        <p><a class="contact-pill" href="mailto:info@sunangai.co.mz?subject=Contacto%20atrav%C3%A9s%20do%20website%20SUNANGAI%20PROJECT" id="footer-contact-btn">Entrar em contacto <span aria-hidden="true">✉</span></a></p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span id="footer-copy">© 2025 Sunangai Project. Todos os direitos reservados</span>
+      <span class="legal-links"><span id="footer-privacy">Política de Privacidade</span><span aria-hidden="true">|</span><span id="footer-terms">Termos de Uso</span></span>
+    </div>
+    <svg class="footer-waves" viewBox="0 0 1440 100" preserveAspectRatio="none" aria-hidden="true"><path d="M0 69 C155 70 220 94 395 94 S675 87 850 96 S1115 96 1240 65 S1380 19 1440 17"/><path d="M0 81 C160 81 240 101 420 101 S700 96 875 105 S1120 105 1260 78 S1390 37 1440 35"/><path d="M0 92 C175 92 260 109 440 109 S720 105 900 114 S1140 114 1280 91 S1400 55 1440 54"/></svg>
+  </footer>
+
+  <script>
+    (function () { var btn=document.querySelector('.menu-toggle'); var menu=document.getElementById('main-menu'); if(!btn||!menu) return; btn.addEventListener('click', function(){ var open=btn.getAttribute('aria-expanded')==='true'; btn.setAttribute('aria-label', open ? 'Abrir menu' : 'Fechar menu');
+        btn.setAttribute('aria-expanded', String(!open)); menu.classList.toggle('is-open', !open);}); menu.querySelectorAll('a').forEach(function(link){ link.addEventListener('click', function(){ if(window.innerWidth<=600){ btn.setAttribute('aria-label','Abrir menu'); btn.setAttribute('aria-expanded','false'); menu.classList.remove('is-open'); } });}); 
+      document.addEventListener('keydown', function (event) {
+        if (event.key !== 'Escape' || !menu.classList.contains('is-open')) return;
+        menu.classList.remove('is-open');
+        btn.setAttribute('aria-label', 'Abrir menu');
+        btn.setAttribute('aria-expanded', 'false');
+        btn.focus();
+      });
+    })();
+  </script>
+  <script>
+    (function () {
+      var buttons = document.querySelectorAll('.lang-btn');
+      if (!buttons.length) return;
+      var t = {
+        pt: { navHome:'Início', navContact:'Contato', navServices:'Serviços', subStudio:'Estúdio Musical', subAgency:'Agência Artística', subEvents:'Produção de Eventos', subDesign:'Design Gráfico', subMarketing:'Marketing', titleMain:'Agência', titleAccent:'Artística', items:['Gestão de Artistas','Consultoria de Imagem','Planeamento de Carreira','Agenciamento para Eventos'], cta:'Contacte-nos', note:'Talento que<br>conecta pessoas.', footerLocation:'LOCALIZAÇÃO', footerSocial:'SOCIAL', footerSocialText:'Siga-nos nas nossas redes sociais', footerConnect:'ENTRE EM CONTACTO', footerText:'Fale connosco por email.', footerBtn:'Entrar em contacto ✉', copy:'© 2025 Sunangai Project. Todos os direitos reservados', privacy:'Política de Privacidade', terms:'Termos de Uso' },
+        en: { navHome:'Home', navContact:'Contact', navServices:'Services', subStudio:'Music Studio', subAgency:'Art Agency', subEvents:'Event Production', subDesign:'Graphic Design', subMarketing:'Marketing', titleMain:'Art', titleAccent:'Agency', items:['Artist Management','Image Consulting','Career Planning','Event Booking'], cta:'Contact us', note:'Talent that<br>connects people.', footerLocation:'LOCATION', footerSocial:'SOCIAL', footerSocialText:'Follow us on our social networks', footerConnect:'GET IN TOUCH', footerText:'Contact us by email.', footerBtn:'Get in touch ✉', copy:'© 2025 Sunangai Project. All rights reserved', privacy:'Privacy Policy', terms:'Terms of Use' }
+      };
+      function set(id,v){var e=document.getElementById(id); if(e)e.textContent=v;}
+      function apply(lang){var c=t[lang]||t.pt; set('nav-home',c.navHome); set('nav-contact',c.navContact); set('nav-services',c.navServices); set('sub-studio',c.subStudio); set('sub-agency',c.subAgency); set('sub-events',c.subEvents); set('sub-design',c.subDesign); set('sub-marketing',c.subMarketing); set('title-main',c.titleMain); set('title-accent',c.titleAccent); c.items.forEach(function(x,i){set('item-'+(i+1),x);}); set('cta-label',c.cta); document.getElementById('agency-note').innerHTML=c.note; set('footer-location-title',c.footerLocation); set('footer-social-title',c.footerSocial); set('footer-social-text',c.footerSocialText); set('footer-connect-title',c.footerConnect); set('footer-connect-text',c.footerText); set('footer-contact-btn',c.footerBtn); set('footer-copy',c.copy); set('footer-privacy',c.privacy); set('footer-terms',c.terms); document.documentElement.lang=lang; localStorage.setItem('site_lang',lang);}
+      var lang='pt'; apply(lang);
+      buttons.forEach(function(b){ b.classList.toggle('is-active',b.dataset.lang===lang); b.addEventListener('click',function(){apply(b.dataset.lang); buttons.forEach(function(x){x.classList.toggle('is-active',x===b);});});});
+    })();
+  </script>
+</body>
+</html>

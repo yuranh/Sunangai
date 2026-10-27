@@ -1,0 +1,38 @@
+# Lista proposta de publicação, relativa à raiz do projeto
+# Excluir qualquer ficheiro que não conste nesta lista.
+index.html
+estudio-musical.html
+agencia-artistica.html
+design-grafico.html
+producao-eventos.html
+marketing.html
+styles.css
+mobile-responsive.css
+fundo.png
+sobre.png
+stuu.png
+agenn.png
+desi.png
+orn.png
+stu.jpg
+agen.jpg
+des.jpeg
+carr.jpg
+fogo.jpg
+seg.jpg
+orna.jpeg
+son.png
+yuyu.png
+susu.mp4
+LOGOS PARA SITE/sunangai-header.png
+LOGOS PARA SITE/logo1.png
+LOGOS PARA SITE/logo2.png
+LOGOS PARA SITE/logo3.png
+LOGOS PARA SITE/logo4.png
+LOGOS PARA SITE/logo5.png
+
+# Não publicar a pasta AUDITORIA_PRE_LANCAMENTO/, scripts de QA,
+# PDFs, backups, recursos de origem não referenciados ou ficheiros de quarentena.
+# Metadados canonical/Open Graph estão nos seis HTML e não acrescentam ficheiros.
+# Favicon e imagem Open Graph não foram adicionados: dependem de ativo aprovado.
+# Esta lista ainda requer validação no pacote final do fornecedor de alojamento.

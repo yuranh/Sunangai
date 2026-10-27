@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Design Gráfico | Sunangai Project</title>
+  <link rel="canonical" href="https://sunangai.co.mz/design-grafico.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Sunangai Project" />
+  <meta property="og:locale" content="pt_MZ" />
+  <meta property="og:title" content="Design Gráfico | Sunangai Project" />
+  <meta property="og:description" content="Servi&#231;os de design gr&#225;fico da Sunangai Project: cria&#231;&#227;o de websites, panfletos, banners, log&#243;tipos, cartazes, capas e artes para redes sociais." />
+  <meta property="og:url" content="https://sunangai.co.mz/design-grafico.html" />
+  <meta name="description" content="Servi&#231;os de design gr&#225;fico da Sunangai Project: cria&#231;&#227;o de websites, panfletos, banners, log&#243;tipos, cartazes, capas e artes para redes sociais." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@700&family=Outfit:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    
+    .service-top { position:relative; z-index:5; padding:8px clamp(18px,2.4vw,42px); border-bottom:1px solid var(--gold); background:#050505; }
+    .service-top .topbar { min-height:68px; margin:0; }
+    .service-top .topbar::before { display:none; }
+    .service-top .brand-logo { width:clamp(220px,21vw,330px); max-height:68px; }
+    .service-top .menu { gap:clamp(22px,3.2vw,54px); margin-right:clamp(12px,2.5vw,42px); }
+    .service-top .menu a { font-size:clamp(13px,.95vw,17px); }
+    .service-top .menu #nav-home { color:var(--gold); }
+    .design-hero { position:relative; isolation:isolate; min-height:clamp(600px,68vh,700px); display:flex; align-items:center; justify-content:flex-end; padding:54px clamp(32px,6.2vw,110px) 76px; overflow:hidden; background:#070707 url("des.jpeg") center 25%/cover no-repeat; }
+    .design-hero::before { content:""; position:absolute; z-index:0; inset:0; background:linear-gradient(90deg,rgba(0,0,0,.08) 0%,rgba(0,0,0,.18) 40%,rgba(0,0,0,.78) 62%,rgba(0,0,0,.94) 100%),linear-gradient(0deg,rgba(0,0,0,.42),transparent 20%,transparent 82%,rgba(0,0,0,.16)); }
+    .design-content { position:relative; z-index:1; width:min(620px,43vw); margin-right:clamp(12px,3vw,48px); padding:24px 0; }
+    .design-title { margin:0 0 18px; color:#fff; font-family:"Cormorant Garamond",serif; font-size:clamp(48px,4.8vw,78px); font-weight:700; letter-spacing:-.035em; line-height:.98; white-space:normal; }
+    .design-title span { color:var(--gold); }
+    .design-title #title-main { color:#fff; }
+    .design-list { display:grid; gap:8px; margin:0 0 22px; padding:0; list-style:none; }
+    .design-list li { display:flex; align-items:center; gap:14px; min-height:42px; color:#fff; font-size:clamp(15px,1.3vw,21px); font-weight:500; line-height:1.2; }
+    .design-icon { display:grid; flex:0 0 clamp(26px,2.8vw,46px); width:clamp(26px,2.8vw,46px); height:clamp(26px,2.8vw,46px); place-items:center; border:2px solid var(--gold); border-radius:50%; background:rgba(0,0,0,.65); color:var(--gold); }
+    .design-icon-image { display:block; width:23px; height:23px; object-fit:contain; }
+    .design-icon svg { display:block; width:23px; height:23px; fill:none; stroke:currentColor; stroke-width:1.8; stroke-linecap:round; stroke-linejoin:round; }
+    .design-cta { display:inline-flex; align-items:center; gap:11px; min-height:52px; padding:6px 20px 6px 9px; border:1px solid var(--gold); border-radius:32px; background:var(--gold); color:#080808; font-size:16px; font-weight:700; text-decoration:none; transition:background-color .2s ease,transform .2s ease; }
+    .design-cta:hover { transform:translateY(-2px); background:#ffd54f; }
+    .design-cta:focus-visible { outline:3px solid #fff; outline-offset:4px; }
+    .design-cta .cta-play { display:grid; width:36px; height:36px; place-items:center; border-radius:50%; background:#050505; color:var(--gold); font-size:15px; }
+    .design-cta .cta-arrow { font-size:22px; }
+    .design-wave { position:absolute; z-index:2; right:0; bottom:-1px; left:0; width:100%; height:62px; pointer-events:none; }
+    .design-wave path { fill:none; stroke:var(--gold); stroke-width:2.5; vector-effect:non-scaling-stroke; }
+    .design-footer { position:relative; margin:0; padding-top:26px; background:#030303; }
+    .design-footer .footer-grid { grid-template-columns:1fr 1.15fr .9fr 1.2fr; gap:clamp(14px,2vw,34px); font-size:clamp(12px,.92vw,15px); }
+    .design-footer .footer-grid > div + div { padding-left:clamp(14px,2.1vw,36px); }
+    .design-brand { display:flex; flex-direction:column; align-items:center; text-align:center; }
+    .design-brand .footer-mark { min-height:64px; height:64px; margin:0; }
+    .design-brand .footer-mark img { width:150px; height:64px; }
+    .design-brand-name { margin:2px 0 3px; color:#fff; font-size:clamp(16px,1.45vw,23px); font-weight:700; letter-spacing:.03em; }
+    .design-brand-name span { color:var(--gold); }
+    .design-brand-tagline { margin:0 0 10px; color:#ddd; font-size:13px; font-style:italic; }
+    .design-footer .footer-title { color:var(--gold); font-family:"Outfit",sans-serif; font-size:clamp(13px,1.05vw,17px); font-weight:700; }
+    .design-footer .footer-heading-icon { width:18px; height:18px; margin-right:7px; vertical-align:-3px; fill:none; stroke:var(--gold); stroke-width:2; stroke-linecap:round; stroke-linejoin:round; }
+    .design-footer .social-links { gap:12px; margin-top:12px; }
+    .design-footer .social-icon { width:40px; height:40px; border-color:var(--gold); color:var(--gold); padding:11px; }
+    .design-footer .contact-pill { display:flex; justify-content:space-between; width:100%; min-height:46px; border:1px solid var(--gold); border-radius:28px; color:#fff; }
+    .design-footer .contact-pill span { display:grid; width:38px; height:38px; place-items:center; margin:-5px -10px -5px 0; border-radius:50%; background:var(--gold); color:#080808; }
+    .design-footer .footer-bottom { margin-top:22px; padding:14px 0 18px; border-top:1px solid rgba(255,184,0,.45); font-size:13px; }
+    .design-footer .legal-links { display:inline-flex; align-items:center; gap:14px; }
+    @media(max-width:900px) {
+      .service-top { padding-inline:18px; }
+      .design-hero { min-height:720px; align-items:flex-start; padding:64px 32px 100px; background-position:45% center; }
+      .design-content { width:min(580px,72vw); margin-right:clamp(12px,3vw,30px); }
+      .design-title { font-size:clamp(48px,8vw,66px); }
+      .design-list { gap:8px; margin-bottom:24px; }
+      .design-list li { min-height:42px; font-size:clamp(16px,2.2vw,20px); }
+      .design-icon { flex-basis:40px; width:40px; height:40px; }
+      .design-footer .footer-grid { grid-template-columns:1fr 1fr; row-gap:24px; }
+      .design-footer .footer-grid > div + div { padding-left:18px; }
+    }
+    @media(max-width:600px) {
+      .service-top { padding:6px 14px; }
+      .service-top .topbar { min-height:64px; }
+      .service-top .brand-logo { width:clamp(158px,46vw,215px); height:58px; max-height:none; object-fit:contain; }
+      .design-hero { min-height:820px; padding:48px 20px 100px; background-position:38% center; }
+      .design-hero::before { background:linear-gradient(90deg,rgba(0,0,0,.73),rgba(0,0,0,.76)),linear-gradient(0deg,rgba(0,0,0,.7),transparent 60%); }
+      .design-content { width:100%; margin-right:0; }
+      .design-title { margin-bottom:16px; font-size:clamp(48px,12vw,68px); }
+      .design-list { gap:8px; margin:0 0 24px; }
+      .design-list li { gap:12px; min-height:40px; font-size:clamp(15px,4vw,18px); }
+      .design-icon { flex-basis:38px; width:38px; height:38px; }
+      .design-icon-image { width:21px; height:21px; }
+      .design-wave { height:52px; }
+      .design-footer { padding:24px 18px 12px; }
+      .design-footer .footer-grid { grid-template-columns:1fr; gap:18px; }
+      .design-footer .footer-grid > div + div { padding:16px 0 0; border-top:1px solid rgba(255,184,0,.32); border-left:0; }
+      .design-brand { align-items:flex-start; text-align:left; }
+      .design-footer .footer-bottom { align-items:flex-start; flex-direction:column; }
+    }
+  </style>
+  <link rel="stylesheet" href="mobile-responsive.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Saltar para o conte&#250;do</a>
+  <header class="site-page-header pattern-bg service-top">
+    <div class="topbar">
+<a class="brand" href="index.html#inicio" aria-label="Sunangai Project &#8212; in&#237;cio"><img class="brand-logo" src="LOGOS PARA SITE/sunangai-header.png" alt="Logo Sunangai Project" /></a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-menu" aria-label="Abrir menu"><svg class="menu-icon" viewBox="0 0 24 24" width="23" height="23" fill="none" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" /></svg></button>
+    <nav id="main-menu" class="menu" aria-label="Navega&#231;&#227;o principal">
+      <a class="active" href="index.html#inicio" id="nav-home">In&#237;cio</a>
+      <a href="#contato" id="nav-contact">Contato</a>
+      <div class="menu-item has-submenu">
+        <a href="index.html#servicos"><span id="nav-services">Servi&#231;os</span> <span class="menu-caret">&#9662;</span></a>
+        <div class="submenu">
+          <a href="estudio-musical.html" id="sub-studio">Est&#250;dio Musical</a>
+          <a href="agencia-artistica.html" id="sub-agency">Ag&#234;ncia Art&#237;stica</a>
+          <a href="producao-eventos.html" id="sub-events">Produ&#231;&#227;o de Eventos</a>
+          <a href="design-grafico.html" id="sub-design">Design Gr&#225;fico</a>
+          <a href="marketing.html" id="sub-marketing">Marketing</a>
+        </div>
+      </div>
+    </nav>
+  </div>
+  </header>
+
+  <main id="main-content" tabindex="-1" class="design-hero">
+    <section class="design-content" aria-labelledby="page-title">
+      <h1 class="design-title" id="page-title"><span id="title-main">Design</span> <span id="title-accent">Gráfico</span></h1>
+      <ul class="design-list">
+        <li><span class="design-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M8 21h8m-4-3v3M3 8h18"/><circle cx="6" cy="6" r=".5" fill="currentColor"/><path d="m8 14 3-3 2 2 2-2 3 3"/></svg></span><span id="item-1">Criação de Websites</span></li>
+        <li><span class="design-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M6 3h10l3 3v15H6z"/><path d="M16 3v4h4M9 11h7m-7 3h7m-7 3h4"/><path d="M3 6v15h13"/></svg></span><span id="item-2">Panfletos e Flyers</span></li>
+        <li><span class="design-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="15" rx="1.5"/><path d="M7 21h10m-5-2v2M6 8h12M7 15l3-3 2 2 2-2 3 3"/></svg></span><span id="item-3">Banners Digitais e Impressos</span></li>
+        <li><span class="design-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3v18M5 7h14M7 7l-4 8h8L7 7Zm10 0-4 8h8l-4-8ZM8 21h8"/></svg></span><span id="item-4">Logótipos e Identidade Visual</span></li>
+        <li><span class="design-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 3h14v18H5zM8 7h8M8 11h8M8 15h5"/><path d="m15 18 2 2 4-5"/></svg></span><span id="item-5">Cartazes Publicitários</span></li>
+        <li><span class="design-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M7 16c2-5 4-5 6 0s4 5 5 0M7 8h.01"/></svg></span><span id="item-6">Capas para Álbuns, EPs e Singles</span></li>
+        <li><span class="design-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="m8.7 10.6 6.6-4.2m-6.6 7 6.6 4.2"/></svg></span><span id="item-7">Artes para Redes Sociais</span></li>
+      </ul>
+      <a class="design-cta" href="#contato" id="cta-contact"><span class="cta-play" aria-hidden="true">▶</span><span id="cta-label">Contacte-nos</span><span class="cta-arrow" aria-hidden="true">➜</span></a>
+    </section>
+    <svg class="design-wave" viewBox="0 0 1600 90" preserveAspectRatio="none" aria-hidden="true"><path d="M0 25 C220 80 330 79 520 79 S970 82 1160 72 S1430 7 1600 21"/><path d="M0 42 C200 86 350 86 535 86 S980 88 1175 78 S1440 24 1600 39"/><path d="M0 58 C210 91 370 90 560 90 S980 92 1190 82 S1450 41 1600 55"/></svg>
+  </main>
+
+  <footer id="contato">
+      <div class="footer-grid">
+      <div>
+        <a class="footer-mark" href="index.html#inicio" aria-label="Sunangai Project — início"><img src="LOGOS PARA SITE/sunangai-header.png" alt="Sunangai Project" loading="lazy" /></a>
+      </div>
+      <div>
+        <div class="footer-title"><svg class="footer-contact-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 22s8-7.1 8-13a8 8 0 1 0-16 0c0 5.9 8 13 8 13Z"/><circle cx="12" cy="9" r="2.5"/></svg><span id="footer-location-title">Localização</span></div>
+        <p class="contact-row"><svg class="footer-contact-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 3.5 9.5 3l2 4.7-2 1.6a15 15 0 0 0 5.2 5.2l1.6-2 4.7 2-.5 2.9a3 3 0 0 1-3.3 2.5A16.8 16.8 0 0 1 4.1 6.8a3 3 0 0 1 2.5-3.3Z"/></svg><a href="tel:+258844501494">+258 84 450 1494</a></p>
+        <p class="contact-row"><svg class="footer-contact-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m4 7 8 6 8-6"/></svg><a href="mailto:info@sunangai.co.mz">info@sunangai.co.mz</a></p>
+        <p class="contact-row"><svg class="footer-contact-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 22s8-7.1 8-13a8 8 0 1 0-16 0c0 5.9 8 13 8 13Z"/><circle cx="12" cy="9" r="2.5"/></svg><a href="https://maps.google.com/?q=Mo%C3%A7ambique%20Maputo%20Bairro%20de%20Malhazine%20Rua%2015%20Q13%20N%C2%BA%20185-R%2FC" target="_blank" rel="noopener noreferrer">Moçambique - Maputo, Bairro de Malhazine Rua 15, Q13, Nº 185-R/C</a></p>
+      </div>
+      <div>
+        <div class="footer-title" id="footer-social-title">Social</div>
+        <div class="social-links">
+          <a class="social-icon ig" href="https://www.instagram.com/sunangaiproject/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7z"/>
+              <path d="M12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 2.1a2.9 2.9 0 1 0 0 5.8 2.9 2.9 0 0 0 0-5.8z"/>
+              <circle cx="17.5" cy="6.5" r="1.2"/>
+            </svg>
+          </a>
+          <a class="social-icon fb" href="https://www.facebook.com/p/Sunangai-Project-SU-Lda-61582045679565/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M13.7 21v-8h2.7l.4-3h-3.1V8.1c0-.9.3-1.6 1.6-1.6h1.7V3.8c-.3 0-1.3-.1-2.4-.1-2.4 0-4 1.4-4 4.2V10H8v3h2.6v8h3.1z"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-title" id="footer-connect-title">ENTRE EM CONTACTO</div>
+        <p id="footer-connect-text">Fale connosco por email.</p>
+        <p><a class="contact-pill" href="mailto:info@sunangai.co.mz?subject=Contacto%20atrav%C3%A9s%20do%20website%20SUNANGAI%20PROJECT" id="footer-contact-btn">Entrar em contacto <span aria-hidden="true">✉</span></a></p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span id="footer-copy">© 2025 Sunangai Project. Todos os direitos reservados</span>
+      <span class="legal-links"><span id="footer-privacy">Política de Privacidade</span><span aria-hidden="true">|</span><span id="footer-terms">Termos de Uso</span></span>
+    </div>
+    <svg class="footer-waves" viewBox="0 0 1440 100" preserveAspectRatio="none" aria-hidden="true"><path d="M0 69 C155 70 220 94 395 94 S675 87 850 96 S1115 96 1240 65 S1380 19 1440 17"/><path d="M0 81 C160 81 240 101 420 101 S700 96 875 105 S1120 105 1260 78 S1390 37 1440 35"/><path d="M0 92 C175 92 260 109 440 109 S720 105 900 114 S1140 114 1280 91 S1400 55 1440 54"/></svg>
+  </footer>
+
+  <script>
+    (function () { var btn=document.querySelector('.menu-toggle'); var menu=document.getElementById('main-menu'); if(!btn||!menu) return; btn.addEventListener('click', function(){ var open=btn.getAttribute('aria-expanded')==='true'; btn.setAttribute('aria-label', open ? 'Abrir menu' : 'Fechar menu');
+        btn.setAttribute('aria-expanded', String(!open)); menu.classList.toggle('is-open', !open);}); menu.querySelectorAll('a').forEach(function(link){ link.addEventListener('click', function(){ if(window.innerWidth<=600){ btn.setAttribute('aria-label','Abrir menu'); btn.setAttribute('aria-expanded','false'); menu.classList.remove('is-open'); } });}); 
+      document.addEventListener('keydown', function (event) {
+        if (event.key !== 'Escape' || !menu.classList.contains('is-open')) return;
+        menu.classList.remove('is-open');
+        btn.setAttribute('aria-label', 'Abrir menu');
+        btn.setAttribute('aria-expanded', 'false');
+        btn.focus();
+      });
+    })();
+  </script>
+  <script>
+    (function () {
+      var buttons = document.querySelectorAll('.lang-btn');
+      var t = {
+        pt: { navHome:'Início', navContact:'Contato', navServices:'Serviços', subStudio:'Estúdio Musical', subAgency:'Agência Artística', subEvents:'Produção de Eventos', subDesign:'Design Gráfico', subMarketing:'Marketing', titleMain:'Design', titleAccent:'Gráfico', items:['Criação de Websites','Panfletos e Flyers','Banners Digitais e Impressos','Logótipos e Identidade Visual','Cartazes Publicitários','Capas para Álbuns, EPs e Singles','Artes para Redes Sociais'], cta:'Contacte-nos', location:'LOCALIZAÇÃO', social:'SOCIAL', socialText:'Siga-nos nas nossas redes sociais', connect:'ENTRE EM CONTACTO', footerText:'Fale connosco por email.', footerBtn:'Entrar em contacto ✉', copy:'© 2025 Sunangai Project. Todos os direitos reservados', privacy:'Política de Privacidade', terms:'Termos de Uso' },
+        en: { navHome:'Home', navContact:'Contact', navServices:'Services', subStudio:'Music Studio', subAgency:'Art Agency', subEvents:'Event Production', subDesign:'Graphic Design', subMarketing:'Marketing', titleMain:'Graphic', titleAccent:'Design', items:['Website Creation','Flyers and Leaflets','Digital and Printed Banners','Logos and Visual Identity','Advertising Posters','Album, EP and Single Covers','Social Media Artwork'], cta:'Contact us', location:'LOCATION', social:'SOCIAL', socialText:'Follow us on our social networks', connect:'GET IN TOUCH', footerText:'Contact us by email.', footerBtn:'Get in touch ✉', copy:'© 2025 Sunangai Project. All rights reserved', privacy:'Privacy Policy', terms:'Terms of Use' }
+      };
+      function set(id, value) { var el=document.getElementById(id); if(el) el.textContent=value; }
+      function apply(lang) {
+        var c=t[lang]||t.pt;
+        set('nav-home',c.navHome); set('nav-contact',c.navContact); set('nav-services',c.navServices);
+        set('sub-studio',c.subStudio); set('sub-agency',c.subAgency); set('sub-events',c.subEvents); set('sub-design',c.subDesign); set('sub-marketing',c.subMarketing);
+        set('title-main',c.titleMain); set('title-accent',c.titleAccent); c.items.forEach(function(item,i){set('item-'+(i+1),item);}); set('cta-label',c.cta);
+        set('footer-location-title',c.location); set('footer-social-title',c.social); set('footer-social-text',c.socialText); set('footer-connect-title',c.connect); set('footer-connect-text',c.footerText); set('footer-contact-btn',c.footerBtn);
+        set('footer-copy',c.copy); set('footer-privacy',c.privacy); set('footer-terms',c.terms);
+        document.documentElement.lang=lang; localStorage.setItem('site_lang',lang);
+      }
+      var lang='pt'; apply(lang);
+      buttons.forEach(function(button){button.classList.toggle('is-active',button.dataset.lang===lang);button.addEventListener('click',function(){lang=button.dataset.lang;apply(lang);buttons.forEach(function(item){item.classList.toggle('is-active',item===button);});});});
+    })();
+  </script>
+</body>
+</html>

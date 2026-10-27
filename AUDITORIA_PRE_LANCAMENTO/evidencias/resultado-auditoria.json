@@ -1,0 +1,71 @@
+{
+  "project": "SUNANGAI PROJECT",
+  "auditedAt": "2026-10-19",
+  "decision": "NAO_APTO_PARA_PUBLICACAO",
+  "inventory": {
+    "productionPages": [
+      "index.html",
+      "estudio-musical.html",
+      "agencia-artistica.html",
+      "design-grafico.html",
+      "producao-eventos.html",
+      "marketing.html"
+    ],
+    "stylesheets": ["styles.css", "mobile-responsive.css"],
+    "technology": "Static HTML/CSS with inline JavaScript and local media",
+    "buildSystem": null,
+    "backend": null,
+    "gitRepository": false,
+    "packageManagerManifest": false,
+    "workspaceFileCount": 146,
+    "workspaceSizeMiB": 107.73,
+    "productionReferencedFileCount": 30,
+    "productionReferencedSizeMiB": 42.39
+  },
+  "tests": [
+    {"name": "site-audit.mjs", "status": "PASSOU", "evidence": "6 pages, 55 internal links, 11 inline scripts; local references, metadata, IDs, fragments and same-tab service navigation"},
+    {"name": "JavaScript syntax: site-audit.mjs, responsive-qa.mjs, .mobile-visual-qa.mjs", "status": "PASSOU"},
+    {"name": "Responsive browser captures", "status": "PASSOU", "evidence": "42 Chromium screenshots: 6 production pages x 320, 375, 390, 430, 768, 1024, 1440 CSS px"},
+    {"name": "Horizontal overflow", "status": "PASSOU", "evidence": "0 of 42 layouts"},
+    {"name": "Visible text clipping", "status": "PASSOU", "evidence": "0 reported; intentionally visually-hidden events H1 excluded"},
+    {"name": "Local img resources", "status": "PASSOU", "evidence": "0 failed img elements after triggering lazy images"},
+    {"name": "Mobile menu click", "status": "PASSOU", "evidence": "opens and closes on all 6 pages at 390 px"},
+    {"name": "Homepage video", "status": "PASSOU", "evidence": "readyState >= 2, controls enabled, error 0 at all 7 widths"},
+    {"name": "Browser JavaScript runtime", "status": "PASSOU", "evidence": "No JS exceptions recorded during captures"},
+    {"name": "Favicon request", "status": "FALHOU", "evidence": "Local /favicon.ico returns 404"},
+    {"name": "Email contact target", "status": "FALHOU", "evidence": "mailto:infosunangai.co.mz lacks @ on all 6 pages"},
+    {"name": "Newsletter subscription", "status": "FALHOU", "evidence": "No form, validation, endpoint or configured provider; CTA uses mailto"},
+    {"name": "Privacy and terms", "status": "FALHOU", "evidence": "Footer labels are spans and no legal pages exist"},
+    {"name": "Social destinations", "status": "FALHOU", "evidence": "All 4 platform links target generic roots rather than company accounts"},
+    {"name": "Keyboard menu activation and full WCAG 2.2 AA", "status": "BLOQUEADO", "evidence": "CDP activation attempt inconclusive; axe unavailable; contrast requires further inspection"},
+    {"name": "Real mail, phone, subscription submission", "status": "NAO_EXECUTADO", "evidence": "No real messages or calls sent; no backend present"},
+    {"name": "HTML/CSS validator, Lighthouse, PageSpeed, Core Web Vitals", "status": "NAO_EXECUTADO", "evidence": "Tools unavailable and no public deployment URL"},
+    {"name": "DNS, production HTTPS and security headers", "status": "BLOQUEADO", "evidence": "No domain/hosting configuration supplied"},
+    {"name": "Media licenses and partner-name verification", "status": "BLOQUEADO", "evidence": "Requires company documentation"}
+  ],
+  "findings": [
+    {"id": "AUD-001", "severity": "ALTO", "status": "PENDENTE", "title": "Invalid mailto address on all six pages", "owner": "Company must confirm official email"},
+    {"id": "AUD-002", "severity": "ALTO", "status": "PENDENTE", "title": "Social links point to generic platform homepages", "owner": "Company must provide official profile URLs"},
+    {"id": "AUD-003", "severity": "ALTO", "status": "PENDENTE", "title": "Privacy and terms references are not links and pages are absent", "owner": "Company/legal reviewer"},
+    {"id": "AUD-004", "severity": "MEDIO", "status": "PENDENTE", "title": "Subscription CTA has no form or backend", "owner": "Company must select service and consent flow"},
+    {"id": "AUD-005", "severity": "MEDIO", "status": "CORRIGIDO_POR_ARQUIVO", "title": "Empty password-like filename in web root", "evidence": "0 bytes; moved intact to evidence quarantine"},
+    {"id": "AUD-006", "severity": "MEDIO", "status": "PENDENTE", "title": "Deployment must exclude QA captures, scripts, PDFs and unused source assets", "owner": "Deployment configuration"},
+    {"id": "AUD-007", "severity": "MEDIO", "status": "PENDENTE", "title": "Canonical/Open Graph/sitemap/robots depend on production domain", "owner": "Domain and SEO configuration"},
+    {"id": "AUD-008", "severity": "BAIXO", "status": "PENDENTE", "title": "No favicon; local browser receives a 404"},
+    {"id": "AUD-009", "severity": "BAIXO", "status": "PENDENTE", "title": "Accessibility, HTML/CSS conformance and production performance not fully certified", "owner": "Manual/tool-assisted review"},
+    {"id": "AUD-010", "severity": "BAIXO", "status": "CORRIGIDO_E_RETESTADO", "title": "Homepage partner-logo overflow at 768 px", "evidence": "Partner grid limited to three columns in the tablet breakpoint; 0 horizontal-overflow layouts in final 42-capture run"}
+  ],
+  "evidence": {
+    "captureGallery": "capturas-responsivas/index.html",
+    "browserReport": "capturas-responsivas/report.json",
+    "fileInventory": "inventario-workspace.csv",
+    "linkInventory": "links-extraidos.csv",
+    "captureCount": 42,
+    "viewportWidths": [320, 375, 390, 430, 768, 1024, 1440]
+  },
+  "securityNotes": {
+    "credentialPatternScan": "No matches for common credential-shaped assignments in scanned text/code; this is not a complete secret audit",
+    "emptyPasswordLikeFile": "0 bytes; quarantined without printing contents",
+    "serverHeaders": "Not verifiable without deployment"
+  }
+}

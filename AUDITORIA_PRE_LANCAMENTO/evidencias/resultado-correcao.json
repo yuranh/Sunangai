@@ -1,0 +1,43 @@
+{
+  "date": "2026-10-19",
+  "status": "Correções aplicadas — aguarda validação humana",
+  "scope": "Local correction plan; no publication or hosting changes",
+  "changes": [
+    "Official email updated in all six pages and mailto contact CTA",
+    "Official Instagram and Facebook destinations set; TikTok and YouTube UI removed",
+    "Newsletter CTA replaced by email contact CTA and matching copy in available translations",
+    "Escape closes the mobile menu on all six pages",
+    "Translation scripts in agency and design pages now target the existing contact CTA ID",
+    "Prepared deployment file list and production metadata proposal"
+  ],
+  "tests": {
+    "siteAudit": { "status": "PASS", "evidence": "6 pages, 55 internal page links, 11 inline scripts; metadata, IDs, fragments and same-tab navigation" },
+    "nodeSyntax": { "status": "PASS", "scripts": ["site-audit.mjs", "responsive-qa.mjs", ".mobile-visual-qa.mjs"] },
+    "responsiveChromium": { "status": "PASS", "pages": 6, "widths": [320, 375, 390, 430, 768, 1024, 1440], "screenshots": 42, "horizontalOverflowLayouts": 0, "visibleTextClippingLayouts": 0, "failedImages": 0 },
+    "mobileMenuClick": { "status": "PASS", "pages": 6, "openedAndClosed": true, "width": 390 },
+    "keyboard": { "status": "PASS", "tabFocusVisible": true, "enterOpensMenu": true, "escapeClosesMenu": true, "contactLinkFocusable": true, "contactLinkFocusVisible": true },
+    "video": { "status": "PASS", "widths": [320, 375, 390, 430, 768, 1024, 1440], "controls": true, "readyState": 4, "mediaError": 0 },
+    "contactAndSocialTargets": { "status": "PASS", "method": "Static assertions across all six HTML pages; no messages or external navigation initiated" },
+    "javascriptRuntime": { "status": "PASS", "javascriptExceptions": 0 },
+    "favicon": { "status": "FAIL", "evidence": "Local Chromium request to /favicon.ico returns HTTP 404; no approved existing icon found" }
+  },
+  "notExecuted": [
+    "Real email client launch or message send",
+    "Legal review and approval",
+    "Public domain, DNS, HTTPS, hosting and server-header checks",
+    "Production SEO, sitemap/robots behavior and public performance metrics",
+    "Third-party asset licenses and official partner names"
+  ],
+  "testHarnessIncidents": [
+    "One intermediate run stopped with TypeError because the keyboard report object was assigned before initialization; the QA script was corrected and a full subsequent run passed.",
+    "One intermediate capture sampled partner logos before image loading completed; the QA script now waits for image loads and the final run reported zero failed images."
+  ],
+  "evidence": {
+    "browserGallery": "capturas-responsivas/index.html",
+    "browserReport": "capturas-responsivas/report.json",
+    "backupDirectory": "backup-pre-correcao-2026-10-19/",
+    "deploymentFileList": "lista-publicacao-proposta.txt",
+    "metadataProposal": "proposta-metadados-publicacao.md"
+  },
+  "publicationAuthorized": false
+}
