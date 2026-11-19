@@ -23,6 +23,21 @@ img, video { max-width: 100%; }
   *, *::before, *::after { scroll-behavior: auto !important; transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; }
 }
 html { scroll-behavior: smooth; scroll-padding-top: 24px; }
+
+.legal-page {
+  min-height: 100vh;
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 52px 24px 80px;
+  color: #f4f0e8;
+  background: #070707;
+}
+.legal-page .footer-mark { display:inline-flex; margin-bottom:32px; }
+.legal-page .footer-mark img { width:min(260px,70vw); height:auto; }
+.legal-page h1 { margin-bottom:24px; color:var(--gold); font-family:"Oswald",sans-serif; text-transform:uppercase; }
+.legal-page h2 { margin:28px 0 8px; color:var(--gold); font-family:"Oswald",sans-serif; font-size:22px; }
+.legal-page p { line-height:1.7; }
+.legal-page a { color:var(--gold); }
 ::selection { color: #080808; background: var(--gold); }
 :focus-visible { outline: 3px solid var(--gold); outline-offset: 4px; }
 .pattern-bg {
@@ -428,12 +443,12 @@ html { scroll-behavior: smooth; scroll-padding-top: 24px; }
   align-items:center;
   justify-content:flex-end;
   text-align:left;
-  background:linear-gradient(to right,rgba(0,0,0,.08) 0%,rgba(0,0,0,.18) 34%,rgba(0,0,0,.98) 54%,#000 100%),url("sobre.png") center / cover no-repeat;
+  background:linear-gradient(to right,rgba(0,0,0,.08) 0%,rgba(0,0,0,.18) 34%,rgba(0,0,0,.98) 54%,#000 100%),url("sobre.png") center 40% / cover no-repeat;
   overflow:hidden;
   border-top: 1px solid rgba(255, 255, 255, 0.09);
   border-bottom: 1px solid rgba(255, 255, 255, 0.09);
 }
-.about-copy { position:relative; z-index:1; width:58%; padding:0 0 0 3%; }
+.about-copy { position:relative; z-index:1; width:42%; padding:0 0 0 3%; }
 .about h3, .pillar h3, .partners h3 {
   color: var(--gold);
   font-family: "Oswald", sans-serif;

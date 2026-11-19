@@ -69,8 +69,8 @@
     background-size:cover;
     border-top:1px solid rgba(244,180,0,.2);
   }
-  #servico-estudio { background-position:56% center; }
-  #servico-agencia { background-position:58% center; }
+  #servico-estudio { background-position:30% center; }
+  #servico-agencia { background-position:80% center; }
   #servico-design { background-position:52% center; }
   #servico-eventos { background-position:55% center; }
   #servico-estudio::before,
@@ -115,7 +115,7 @@
     padding:clamp(230px,66vw,340px) 22px 34px;
     background:linear-gradient(180deg,rgba(0,0,0,.02) 0%,rgba(0,0,0,.12) 34%,rgba(0,0,0,.86) 62%,#030609 100%),url("sobre.png") 48% center/cover no-repeat;
   }
-  .about-copy { width:100%; max-width:650px; padding:0; }
+  .about-copy { width:100%; max-width:650px; padding:12px 0; background:#030609; }
   .about h3,.pillar h3 { margin-bottom:12px; font-size:clamp(27px,7vw,34px); }
   .about p { max-width:620px; font-size:16px; line-height:1.58; }
   .pillars { padding:32px 22px; }
